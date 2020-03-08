@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+            *** GENERATED FROM xml_binding_cfg.xml - DO NOT EDIT  ***
+            *** Configure thru JAXB Wizard.                       ***
+        --><project name="SharesBrokering_jaxb" default="default" basedir=".">
+    <target name="xjc-typedef-target" depends="-init-project">
+        <typedef classname="com.sun.tools.xjc.XJCTask" name="xjc" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig">
+            <classpath path="${jaxbwiz.xjcdef.classpath}"/>
+        </typedef>
+    </target>
+    <target name="jaxb-clean-code-generation" depends="clean,jaxb-code-generation"/>
+    <target name="jaxb-code-generation" depends="xjc-typedef-target,-do-init,-init-macrodef-javac">
+        <mkdir dir="${build.generated.sources.dir}/jaxb" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache" xmlns:s="http://xml.netbeans.org/schema/JAXBWizConfig"/>
+        <mkdir dir="build/generated/jaxbCache/SharesRequest"/>
+        <xjc package="Shares" destdir="build/generated/jaxbCache/SharesRequest" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/SharesRequest/Shares.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/SharesRequest/Shares.xsd"/>
+            <produces dir="build/generated/jaxbCache/SharesRequest"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/SharesRequest"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/UsersRequest"/>
+        <xjc package="Users" destdir="build/generated/jaxbCache/UsersRequest" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/UsersRequest/Users.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/UsersRequest/Users.xsd"/>
+            <produces dir="build/generated/jaxbCache/UsersRequest"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/UsersRequest"/>
+        </copy>
+        <mkdir dir="build/generated/jaxbCache/UserSharesRequest"/>
+        <xjc package="UserShares" destdir="build/generated/jaxbCache/UserSharesRequest" catalog="catalog.xml">
+            <classpath>
+                <pathelement location="${src.dir}"/>
+                <pathelement path="${jaxbwiz.xjcrun.classpath}"/>
+            </classpath>
+            <arg value="-xmlschema"/>
+            <schema file="src/conf/xml-resources/jaxb/UserSharesRequest/UserShares.xsd"/>
+            <depends file="src/conf/xml-resources/jaxb/UserSharesRequest/UserShares.xsd"/>
+            <produces dir="build/generated/jaxbCache/UserSharesRequest"/>
+        </xjc>
+        <copy todir="${build.generated.sources.dir}/jaxb">
+            <fileset dir="build/generated/jaxbCache/UserSharesRequest"/>
+        </copy>
+        <!--*** Web project javac macro does not support sourcepath attribute, so do not pass "sourcepath=${src.dir}"-->
+    </target>
+</project>

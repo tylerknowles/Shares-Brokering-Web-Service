@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://xml.netbeans.org/schema/Users"
+    xmlns:tns="http://xml.netbeans.org/schema/Users"
+    elementFormDefault="qualified">
+
+    <xsd:complexType name="user">
+        <xsd:sequence>
+            <xsd:element name="Username" type="xsd:string"/>
+            <xsd:element name="Password" type="xsd:string"/>
+            <xsd:element name="Currency" type="xsd:string"/>
+            <xsd:element name="Wallet" type="xsd:double"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="Users">
+        <xsd:complexType>
+            <xsd:sequence >
+                <xsd:element name="User" type="tns:user" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+</xsd:schema>

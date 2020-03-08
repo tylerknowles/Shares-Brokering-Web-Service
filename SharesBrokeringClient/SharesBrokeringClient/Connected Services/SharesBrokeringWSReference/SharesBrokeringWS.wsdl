@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://shares.me.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SharesBrokeringWS" targetNamespace="http://shares.me.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=1" namespace="http://xml.netbeans.org/schema/Users" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=2" namespace="http://xml.netbeans.org/schema/UserShares" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=3" namespace="http://xml.netbeans.org/schema/Shares" />
+    </xsd:schema>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=4" namespace="http://shares.me.org/" />
+    </xsd:schema>
+  </types>
+  <message name="getUser">
+    <part name="parameters" element="tns:getUser" />
+  </message>
+  <message name="getUserResponse">
+    <part name="parameters" element="tns:getUserResponse" />
+  </message>
+  <message name="Login">
+    <part name="parameters" element="tns:Login" />
+  </message>
+  <message name="LoginResponse">
+    <part name="parameters" element="tns:LoginResponse" />
+  </message>
+  <message name="AddUserShare">
+    <part name="parameters" element="tns:AddUserShare" />
+  </message>
+  <message name="AddUserShareResponse">
+    <part name="parameters" element="tns:AddUserShareResponse" />
+  </message>
+  <message name="AddShare">
+    <part name="parameters" element="tns:AddShare" />
+  </message>
+  <message name="AddShareResponse">
+    <part name="parameters" element="tns:AddShareResponse" />
+  </message>
+  <message name="ExchangeWallet">
+    <part name="parameters" element="tns:ExchangeWallet" />
+  </message>
+  <message name="ExchangeWalletResponse">
+    <part name="parameters" element="tns:ExchangeWalletResponse" />
+  </message>
+  <message name="getNews">
+    <part name="parameters" element="tns:getNews" />
+  </message>
+  <message name="getNewsResponse">
+    <part name="parameters" element="tns:getNewsResponse" />
+  </message>
+  <message name="GetUserShares">
+    <part name="parameters" element="tns:GetUserShares" />
+  </message>
+  <message name="GetUserSharesResponse">
+    <part name="parameters" element="tns:GetUserSharesResponse" />
+  </message>
+  <message name="SellShare">
+    <part name="parameters" element="tns:SellShare" />
+  </message>
+  <message name="SellShareResponse">
+    <part name="parameters" element="tns:SellShareResponse" />
+  </message>
+  <message name="getShare">
+    <part name="parameters" element="tns:getShare" />
+  </message>
+  <message name="getShareResponse">
+    <part name="parameters" element="tns:getShareResponse" />
+  </message>
+  <message name="GetCurrencyList">
+    <part name="parameters" element="tns:GetCurrencyList" />
+  </message>
+  <message name="GetCurrencyListResponse">
+    <part name="parameters" element="tns:GetCurrencyListResponse" />
+  </message>
+  <message name="adjustWallet">
+    <part name="parameters" element="tns:adjustWallet" />
+  </message>
+  <message name="adjustWalletResponse">
+    <part name="parameters" element="tns:adjustWalletResponse" />
+  </message>
+  <message name="AddNewUser">
+    <part name="parameters" element="tns:AddNewUser" />
+  </message>
+  <message name="AddNewUserResponse">
+    <part name="parameters" element="tns:AddNewUserResponse" />
+  </message>
+  <message name="GetFilteredShares">
+    <part name="parameters" element="tns:GetFilteredShares" />
+  </message>
+  <message name="GetFilteredSharesResponse">
+    <part name="parameters" element="tns:GetFilteredSharesResponse" />
+  </message>
+  <portType name="SharesBrokeringWS">
+    <operation name="getUser">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/getUserRequest" message="tns:getUser" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/getUserResponse" message="tns:getUserResponse" />
+    </operation>
+    <operation name="Login">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/LoginRequest" message="tns:Login" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/LoginResponse" message="tns:LoginResponse" />
+    </operation>
+    <operation name="AddUserShare">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/AddUserShareRequest" message="tns:AddUserShare" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/AddUserShareResponse" message="tns:AddUserShareResponse" />
+    </operation>
+    <operation name="AddShare">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/AddShareRequest" message="tns:AddShare" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/AddShareResponse" message="tns:AddShareResponse" />
+    </operation>
+    <operation name="ExchangeWallet">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/ExchangeWalletRequest" message="tns:ExchangeWallet" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/ExchangeWalletResponse" message="tns:ExchangeWalletResponse" />
+    </operation>
+    <operation name="getNews">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/getNewsRequest" message="tns:getNews" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/getNewsResponse" message="tns:getNewsResponse" />
+    </operation>
+    <operation name="GetUserShares">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/GetUserSharesRequest" message="tns:GetUserShares" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/GetUserSharesResponse" message="tns:GetUserSharesResponse" />
+    </operation>
+    <operation name="SellShare">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/SellShareRequest" message="tns:SellShare" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/SellShareResponse" message="tns:SellShareResponse" />
+    </operation>
+    <operation name="getShare">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/getShareRequest" message="tns:getShare" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/getShareResponse" message="tns:getShareResponse" />
+    </operation>
+    <operation name="GetCurrencyList">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/GetCurrencyListRequest" message="tns:GetCurrencyList" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/GetCurrencyListResponse" message="tns:GetCurrencyListResponse" />
+    </operation>
+    <operation name="adjustWallet">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/adjustWalletRequest" message="tns:adjustWallet" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/adjustWalletResponse" message="tns:adjustWalletResponse" />
+    </operation>
+    <operation name="AddNewUser">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/AddNewUserRequest" message="tns:AddNewUser" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/AddNewUserResponse" message="tns:AddNewUserResponse" />
+    </operation>
+    <operation name="GetFilteredShares">
+      <input wsam:Action="http://shares.me.org/SharesBrokeringWS/GetFilteredSharesRequest" message="tns:GetFilteredShares" />
+      <output wsam:Action="http://shares.me.org/SharesBrokeringWS/GetFilteredSharesResponse" message="tns:GetFilteredSharesResponse" />
+    </operation>
+  </portType>
+  <binding name="SharesBrokeringWSPortBinding" type="tns:SharesBrokeringWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="Login">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddUserShare">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddShare">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ExchangeWallet">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNews">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetUserShares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SellShare">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getShare">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetCurrencyList">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="adjustWallet">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddNewUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetFilteredShares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SharesBrokeringWS">
+    <port name="SharesBrokeringWSPort" binding="tns:SharesBrokeringWSPortBinding">
+      <soap:address location="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS" />
+    </port>
+  </service>
+</definitions>

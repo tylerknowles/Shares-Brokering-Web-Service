@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://xml.netbeans.org/schema/Shares" elementFormDefault="qualified" targetNamespace="http://xml.netbeans.org/schema/Shares" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Share">
+    <xs:sequence>
+      <xs:element name="CompanyName" type="xs:string" />
+      <xs:element name="CompanySymbol" type="xs:string" />
+      <xs:element name="QtyAvailable" type="xs:int" />
+      <xs:element name="Price" type="tns:SharePrice" />
+      <xs:element name="UpdateDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SharePrice">
+    <xs:sequence>
+      <xs:element name="Currency" type="xs:string" />
+      <xs:element name="Value" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

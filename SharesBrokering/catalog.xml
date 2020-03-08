@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/Users/tyler/OneDrive/Documents/Cloud/SharesBrokering/src/java/org/me/shares/Shares.xsd" uri="src/conf/xml-resources/jaxb/SharesRequest/Shares.xsd"/>
+    <system systemId="file:/C:/Users/tyler/OneDrive/Documents/Cloud/SharesBrokering/src/java/org/me/shares/Users.xsd" uri="src/conf/xml-resources/jaxb/UsersRequest/Users.xsd"/>
+    <system systemId="file:/C:/Users/tyler/OneDrive/Documents/Cloud/SharesBrokering/src/java/org/me/shares/UserShares.xsd" uri="src/conf/xml-resources/jaxb/UserSharesRequest/UserShares.xsd"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?wsdl" uri="src/conf/xml-resources/web-service-references/CurrencyConversionWSService/wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.wsdl"/>
+    <system systemId="http://localhost:8080/CurrencyConvertor/CurrencyConversionWSService?xsd=1" uri="src/conf/xml-resources/web-service-references/CurrencyConversionWSService/wsdl/localhost_8080/CurrencyConvertor/CurrencyConversionWSService.xsd_1.xsd"/>
+</catalog>

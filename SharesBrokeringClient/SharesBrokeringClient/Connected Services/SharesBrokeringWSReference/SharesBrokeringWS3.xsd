@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ns1="http://xml.netbeans.org/schema/Shares" xmlns:tns="http://shares.me.org/" xmlns:ns2="http://xml.netbeans.org/schema/Users" xmlns:ns3="http://xml.netbeans.org/schema/UserShares" targetNamespace="http://shares.me.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=3" namespace="http://xml.netbeans.org/schema/Shares" />
+  <xs:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=1" namespace="http://xml.netbeans.org/schema/Users" />
+  <xs:import schemaLocation="http://localhost:8080/SharesBrokeringWS/SharesBrokeringWS?xsd=2" namespace="http://xml.netbeans.org/schema/UserShares" />
+  <xs:element name="AddNewUser" type="tns:AddNewUser" />
+  <xs:element name="AddNewUserResponse" type="tns:AddNewUserResponse" />
+  <xs:element name="AddShare" type="tns:AddShare" />
+  <xs:element name="AddShareResponse" type="tns:AddShareResponse" />
+  <xs:element name="AddUserShare" type="tns:AddUserShare" />
+  <xs:element name="AddUserShareResponse" type="tns:AddUserShareResponse" />
+  <xs:element name="ExchangeWallet" type="tns:ExchangeWallet" />
+  <xs:element name="ExchangeWalletResponse" type="tns:ExchangeWalletResponse" />
+  <xs:element name="GetCurrencyList" type="tns:GetCurrencyList" />
+  <xs:element name="GetCurrencyListResponse" type="tns:GetCurrencyListResponse" />
+  <xs:element name="GetFilteredShares" type="tns:GetFilteredShares" />
+  <xs:element name="GetFilteredSharesResponse" type="tns:GetFilteredSharesResponse" />
+  <xs:element name="GetUserShares" type="tns:GetUserShares" />
+  <xs:element name="GetUserSharesResponse" type="tns:GetUserSharesResponse" />
+  <xs:element name="Login" type="tns:Login" />
+  <xs:element name="LoginResponse" type="tns:LoginResponse" />
+  <xs:element name="SellShare" type="tns:SellShare" />
+  <xs:element name="SellShareResponse" type="tns:SellShareResponse" />
+  <xs:element name="adjustWallet" type="tns:adjustWallet" />
+  <xs:element name="adjustWalletResponse" type="tns:adjustWalletResponse" />
+  <xs:element name="getNews" type="tns:getNews" />
+  <xs:element name="getNewsResponse" type="tns:getNewsResponse" />
+  <xs:element name="getShare" type="tns:getShare" />
+  <xs:element name="getShareResponse" type="tns:getShareResponse" />
+  <xs:element name="getUser" type="tns:getUser" />
+  <xs:element name="getUserResponse" type="tns:getUserResponse" />
+  <xs:complexType name="AddShare">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element minOccurs="0" name="arg3" type="xs:string" />
+      <xs:element minOccurs="0" name="arg4" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddShareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SellShare">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SellShareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUserShare">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUserShareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetFilteredShares">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:int" />
+      <xs:element minOccurs="0" name="arg4" type="xs:double" />
+      <xs:element minOccurs="0" name="arg5" type="xs:double" />
+      <xs:element minOccurs="0" name="arg6" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetFilteredSharesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns1:Share" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Login">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangeWallet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangeWalletResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNews">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNewsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getShare">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getShareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns1:Share" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetCurrencyList">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="GetCurrencyListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="ns2:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adjustWallet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1" type="xs:double" />
+      <xs:element name="arg2" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="adjustWalletResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddNewUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element name="arg3" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddNewUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserShares">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+      <xs:element name="arg2" type="xs:int" />
+      <xs:element name="arg3" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetUserSharesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="ns3:ShareInfo" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
